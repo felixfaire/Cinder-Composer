@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cinder>
+<block
+	name="Faire-Utils"
+	id="com.felixfaire.composer"
+	author="Felix Faire"
+	summary="Basic scenegraph with postprocessing"
+	git="https://github.com/felixfaire"
+	version="0.0"
+	>
+	<supports os="ios" />
+	<supports os="macosx" />
+	<supports os="msw" />
+	<includePath>src</includePath>
+    
+    <header>src/Composer.h</header>
+    
+</block>
+</cinder>
