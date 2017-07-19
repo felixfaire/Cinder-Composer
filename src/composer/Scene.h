@@ -9,7 +9,6 @@
 #define Scene_h
 
 #include "cinder/gl/gl.h"
-#include "cinder/Timeline.h"
 
 
 using namespace ci;
@@ -25,25 +24,6 @@ typedef std::shared_ptr<Scene> SceneRef;
 class Scene
 {
 public:
-
-//    template<typename T>
-//    struct Parameter
-//    {
-//        Parameter( const std::string& pName, T pValue )
-//            : name( pName ),
-//              value( pValue )
-//        {
-//        }
-//        
-//        void moveTo( T newValue, float time )
-//        {
-//            timeline().apply( &value, newValue, time );
-//        }
-//        
-//        std::string name = { "???" };
-//        Anim<T> value;
-//    };
-
     
     Scene()
     {

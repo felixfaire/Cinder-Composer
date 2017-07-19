@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <cinder>
 <block
-	name="Faire-Utils"
+	name="Faire-Composer"
 	id="com.felixfaire.composer"
 	author="Felix Faire"
 	summary="Basic scenegraph with postprocessing"
