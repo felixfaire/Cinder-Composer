@@ -27,6 +27,12 @@ typedef std::shared_ptr<Layer> LayerRef;
 class Layer
 {
 public:
+
+    static LayerRef create( int width, int height, int msaa = 0 )
+    {
+        return std::make_shared<Layer>( width, height, msaa );
+    }
+
     Layer( int width , int height, int msaa = 0 )
     {
         mFbo = gl::Fbo::create( width, height, gl::Fbo::Format().samples( msaa ) );

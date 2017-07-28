@@ -9,7 +9,7 @@
 #define Scene_h
 
 #include "cinder/gl/gl.h"
-
+#include "cinder/Timeline.h"
 
 using namespace ci;
 using namespace ci::app;
