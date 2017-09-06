@@ -20,6 +20,9 @@ using namespace ci::app;
     This abstract class represents a post processing stage that can happen
     on a layer
 */
+class Postprocess;
+typedef std::shared_ptr<Postprocess> PostprocessRef;
+
 class Postprocess
 {
 public:
