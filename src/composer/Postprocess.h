@@ -10,7 +10,7 @@
 
 
 #include "cinder/gl/gl.h"
-
+#include "cinder/app/App.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -76,12 +76,15 @@ public:
         
         mPostProcessShader->uniform( "tex0", 0 );
         updateUniforms( mPostProcessShader );
-        gl::drawSolidRect( Rectf(0, 0, targetFbo->getWidth(), targetFbo->getHeight()) );
+        gl::drawSolidRect( Rectf(0.0f, 0.0f, (float)targetFbo->getWidth(), (float)targetFbo->getHeight()) );
     }
     
     virtual void updateUniforms( gl::GlslProgRef& prog ) {}
-    
-private:
+
+
+protected:
+
+    gl::GlslProgRef mPostProcessShader;
 
     const std::string getThruVertex()
     {
@@ -111,12 +114,11 @@ private:
         }
         catch( const std::exception& e )
         {
-          std::cout << "PostProcess shader error: " << e.what() << std::endl;
+          console() << "PostProcess shader error: " << e.what() << std::endl;
           CI_ASSERT( false );
         }
     }
-    
-    gl::GlslProgRef mPostProcessShader;
+
 };
 
 
